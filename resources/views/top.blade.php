@@ -1,10 +1,7 @@
-{{--<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->margin(0)->size(200)->generate('http://www.hoact.xinhdep.com')) !!} ">--}}
-{{--{{QrCode::format('png')->size(399)->color(11,40,40)->generate('Make me a QrCode!')}}--}}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>QR Code</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,6 +22,13 @@
                 <div class="form-group">
                     <label for="usr" style="color: #5cb85c">Nhập URL:</label>
                     <input type="text" class="form-control" id="usr" name="url">
+                </div>
+                <div class="form-group">
+                    <label for="usr" style="color: #5cb85c">Chọn kích thước mã QR code:</label>
+                </div>
+                <div class="form-group">
+                    <label class="radio-inline"><input type="radio" value="100" name="qr_size">100 px</label>
+                    <label class="radio-inline"><input type="radio" value="200" name="qr_size" checked>200 px</label>
                 </div>
                 <button type="submit" class="btn btn-success">Download Mã QRCode</button>
                 <a href="{{route('logout')}}">

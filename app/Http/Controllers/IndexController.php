@@ -63,8 +63,9 @@ class IndexController extends Controller
             return redirect()->route('top');
         }
 
-        base64_encode(QrCode::format('png')->margin(0)->size(200)->generate($request['url'], 'QRCode.png'));
+        base64_encode(QrCode::format('png')->margin(0)->size($request['qr_size'])->generate($request['url'], 'QRCode.png'));
 
         return Response::download('QRCode.png');
+
     }
 }
