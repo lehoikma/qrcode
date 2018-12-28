@@ -1,13 +1,28 @@
 <div class="container">
     <div class="card card-container">
-        <p id="profile-name" class="profile-name-card"></p>
+        
+        <p id="profile-name" class="profile-name-card">
+            <img src="logo.png">
+        </p>
+        <h3 style="text-align: center; color: red">CÔNG TY CỔ PHẦN TRUYỀN THÔNG AGRI PLUS</h3>
         <form class="form-signin" method="post" action="{{route('login')}}">
             {{csrf_field()}}
             <span id="reauth-email" class="reauth-email"></span>
             <input type="email" name="email" id="inputEmail" class="form-control" placeholder=" Email address" required autofocus>
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder=" Password" required>
-            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Đăng Nhập</button>
         </form><!-- /form -->
+        
+        Địa chỉ: Số 50 phố Hòa Mã, Phường Ngô Thì Nhận, Quận Hai Bà Trưng, Hà Nội<br>
+        Email: agrimediaplus@gmail.com<br>
+        Website: agriplus.vn<br>
+        Điện thoại: 0977715411<br>
+        Lĩnh vực hoạt động :<br>
+        - Thiết kế website<br>
+        - Làm phim tài liệu, phim TVC quảng cáo<br>
+        - Tổ chức even báo chí<br>
+        - Viết bài, book đăng bài PR trên báo<br>
+        - Thiết kế mã QR Code<br>
     </div><!-- /card-container -->
 </div><!-- /container -->
 
@@ -19,7 +34,7 @@
     }
 
     .card-container.card {
-        max-width: 350px;
+        max-width: 450px;
         padding: 40px 40px;
     }
 
